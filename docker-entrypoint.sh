@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-echo "changing directory permssion..."
+echo "changing directory permission..."
 for dir in `mount|awk '{print \$3}'`;do
    if [[ $dir =~ ^/var/www/html/ ]]; then
 	cmd="chmod -R a+rw $dir";
