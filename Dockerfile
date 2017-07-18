@@ -3,8 +3,7 @@ FROM ubuntu:16.04
 ENV DEBIAN_FRONTEND noninteractive
 
 WORKDIR "/var/www/html"
-#RUN ls /;
-COPY /sources.list /etc/apt/sources.list
+
 RUN apt-get update; 
 RUN   mkdir -p /etc/php/7.0/mods-available\
     &&echo 'extension=amqp.so'>/etc/php/7.0/mods-available/amqp.ini\
