@@ -7,7 +7,7 @@ WORKDIR "/var/www/html"
 RUN apt-get update\ 
     &&mkdir -p /etc/php/7.0/mods-available\
     &&echo 'extension=amqp.so'>/etc/php/7.0/mods-available/amqp.ini\
-    &&apt-get install -y --no-install-recommends php-fpm php-mcrypt php-xdebug php-amqp php-mongodb php-redis php-mbstring php-gd php-imagick php-mysql php-curl php-igbinary php-xml php-apcu libzookeeper-mt2 curl\
+    &&apt-get install -y --no-install-recommends php-fpm php-mcrypt php-xdebug php-amqp php-mongodb php-redis php-mbstring php-gd php-imagick php-mysql php-curl php-igbinary php-xml php-apcu php-zip libzookeeper-mt2 curl\
     &&apt-get install -y --no-install-recommends ca-certificates\
     &&rm -rf /var/lib/apt/lists/*
 
